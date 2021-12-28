@@ -7,10 +7,10 @@ def create_app():
 
     app.config.from_mapping(
             SECRET_KEY='mikey',
-            DATABASE_HOST='ble5mmo2o5v9oouq.cbetxkdyhwsb.us-east-1.rds.amazonaws.com',
-            DATABASE_PASSWORD='tqkb217eerv38ddo',
-            DATABASE_USER='u4jofa5m2zaocsu7',
-            DATABASE='ir5mplk9rirjxupk',
+            DATABASE_HOST=os.environ.get('ble5mmo2o5v9oouq.cbetxkdyhwsb.us-east-1.rds.amazonaws.com'),
+            DATABASE_PASSWORD=os.environ.get('tqkb217eerv38ddo'),
+            DATABASE_USER=os.environ.get('u4jofa5m2zaocsu7'),
+            DATABASE=os.environ.get('ir5mplk9rirjxupk'),
     )
 
     from . import db
